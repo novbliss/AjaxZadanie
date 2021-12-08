@@ -5,6 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX - strona</title>
+    <style type="text/css">
+        .mount{
+            display: flex;
+            background-color: #f4f5f6;
+            padding: 10px;
+            margin-bottom: 10px;
+            
+        }
+        .mount ul{
+            list-style: none;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 25px;
+            letter-spacing: -1px;
+            word-spacing: 2px;
+            color: #000000;
+            font-weight: 400;
+            text-decoration: rgb(68, 68, 68);
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+        }
+        .mount img{
+            width: 100px;
+            transition: width 1s ease 0s;
+        }
+        .mount img:hover{
+            width: 350px;
+        }
+    </style>
 </head>
 <body>
     <button id="przycisk">Załaduj góry</button>
@@ -22,12 +51,14 @@
                     var output = '';
                     for(let i in users){
                         output += `
-                            <ul>
-                                <li>ID: ${users[i].id}</li>
-                                <li>Title: ${users[i].title}</li>
-                                <li>Name: ${users[i].name}</li>
-                                <li>Zdjęcie: ${users[i].img}</li>
-                            </ul>
+                            <div class="mount">
+                                <ul>
+                                    <li>ID: ${users[i].id}</li>
+                                    <li>Title: ${users[i].title}</li>
+                                    <li>Name: ${users[i].name}</li>
+                                    <img src="${users[i].img}" />
+                                </ul>
+                            </div>
                         `;
                     }
                     document.getElementById("gory").innerHTML = output;
