@@ -1,0 +1,32 @@
+[
+    {
+        "id":"1",
+        "title":"Najwyższe pasmo w łańcuchu Karpat",
+        "name":"tatry",
+        "img":"https://www.tatry-przewodnik.com.pl/images/jaworowe-turnie-1.jpg"
+    },
+    {
+        "id":"2",
+        "title":"Grupa dwóch pasm górskich w łańcuchu Karpat",
+        "name":"bieszczady",
+        "img":""
+    },
+    {
+        "id":"3",
+        "title":"Łańcuch górski w środkowej Europie",
+        "name":"karpaty",
+        "img":""
+    },
+    {
+        "id":"4",
+        "title":"Grupa pasm górskich w łańcuchu Karpat",
+        "name":"beskidy",
+        "img":""
+    },
+    {
+        "id":"5",
+        "title":"Łańcuch górski na obszarze południowo-zachodniej Polski i północnych Czech",
+        "name":"sudety",
+        "img":""
+    }
+]

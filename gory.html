@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Góry - AJAX - strona</title>
+    <title>AJAX - strona</title>
 </head>
 <body>
-    
+    <button id="przycisk">Załaduj góry</button>
+    <h1>Góry</h1>
+    <div id="gory"></div>
+    <script type="text/javascript">
+        document.getElementById("przycisk").addEventListener("click",ladujUsera)
+        function ladujUsera(){
+            var XHR = new XMLHttpRequest();
+            XHR.open('GET','mountains.json',true);
+
+            XHR.onload = function(){
+                if(this.status == 200){
+                    var users = JSON.parse(this.responseText);
+                    var output = '';
+                    for(let i in users){
+                        output += `
+                            <ul>
+                                <li>ID: ${users[i].id}</li>
+                                <li>Title: ${users[i].title}</li>
+                                <li>Name: ${users[i].name}</li>
+                                <li>Zdjęcie: ${users[i].img}</li>
+                            </ul>
+                        `;
+                    }
+                    document.getElementById("gory").innerHTML = output;
+                }
+            }
+            XHR.send();
+        }
+    </script>
 </body>
 </html>
